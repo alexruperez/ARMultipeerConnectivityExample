@@ -13,8 +13,7 @@
 		D5261DE718A811A1000D415B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D5261DE518A811A1000D415B /* InfoPlist.strings */; };
 		D5261DE918A811A1000D415B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D5261DE818A811A1000D415B /* main.m */; };
 		D5261DED18A811A1000D415B /* ARAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D5261DEC18A811A1000D415B /* ARAppDelegate.m */; };
-		D5261DF018A811A1000D415B /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5261DEE18A811A1000D415B /* Main_iPhone.storyboard */; };
-		D5261DF318A811A1000D415B /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5261DF118A811A1000D415B /* Main_iPad.storyboard */; };
+		D5261DF018A811A1000D415B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5261DEE18A811A1000D415B /* Main.storyboard */; };
 		D5261DF618A811A1000D415B /* ARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5261DF518A811A1000D415B /* ARViewController.m */; };
 		D5261DF818A811A1000D415B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5261DF718A811A1000D415B /* Images.xcassets */; };
 		D5261DFF18A811A1000D415B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5261DFE18A811A1000D415B /* XCTest.framework */; };
@@ -45,8 +44,7 @@
 		D5261DEA18A811A1000D415B /* MultipeerConnectivityExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MultipeerConnectivityExample-Prefix.pch"; sourceTree = "<group>"; };
 		D5261DEB18A811A1000D415B /* ARAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARAppDelegate.h; sourceTree = "<group>"; };
 		D5261DEC18A811A1000D415B /* ARAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARAppDelegate.m; sourceTree = "<group>"; };
-		D5261DEF18A811A1000D415B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		D5261DF218A811A1000D415B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		D5261DEF18A811A1000D415B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D5261DF418A811A1000D415B /* ARViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARViewController.h; sourceTree = "<group>"; };
 		D5261DF518A811A1000D415B /* ARViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARViewController.m; sourceTree = "<group>"; };
 		D5261DF718A811A1000D415B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -116,8 +114,7 @@
 			children = (
 				D5261DEB18A811A1000D415B /* ARAppDelegate.h */,
 				D5261DEC18A811A1000D415B /* ARAppDelegate.m */,
-				D5261DEE18A811A1000D415B /* Main_iPhone.storyboard */,
-				D5261DF118A811A1000D415B /* Main_iPad.storyboard */,
+				D5261DEE18A811A1000D415B /* Main.storyboard */,
 				D5261DF418A811A1000D415B /* ARViewController.h */,
 				D5261DF518A811A1000D415B /* ARViewController.m */,
 				D5261DF718A811A1000D415B /* Images.xcassets */,
@@ -232,9 +229,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5261DF318A811A1000D415B /* Main_iPad.storyboard in Resources */,
 				D5261DF818A811A1000D415B /* Images.xcassets in Resources */,
-				D5261DF018A811A1000D415B /* Main_iPhone.storyboard in Resources */,
+				D5261DF018A811A1000D415B /* Main.storyboard in Resources */,
 				D5261DE718A811A1000D415B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,20 +283,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		D5261DEE18A811A1000D415B /* Main_iPhone.storyboard */ = {
+		D5261DEE18A811A1000D415B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D5261DEF18A811A1000D415B /* Base */,
 			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		D5261DF118A811A1000D415B /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D5261DF218A811A1000D415B /* Base */,
-			);
-			name = Main_iPad.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		D5261E0718A811A1000D415B /* InfoPlist.strings */ = {
@@ -393,6 +381,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MultipeerConnectivityExample/MultipeerConnectivityExample-Prefix.pch";
 				INFOPLIST_FILE = "MultipeerConnectivityExample/MultipeerConnectivityExample-Info.plist";
@@ -406,6 +395,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MultipeerConnectivityExample/MultipeerConnectivityExample-Prefix.pch";
 				INFOPLIST_FILE = "MultipeerConnectivityExample/MultipeerConnectivityExample-Info.plist";
