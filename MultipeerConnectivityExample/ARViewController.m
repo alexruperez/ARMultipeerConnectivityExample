@@ -52,6 +52,7 @@
 }
 
 - (void)session:(MCSession *)session peer:(MCPeerID *)peerID didChangeState:(MCSessionState)state {
+    NSLog(@"didChangeState");
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.broadcastButton setEnabled:[self.session.connectedPeers count]];
         [self.tableView reloadData];
@@ -60,29 +61,56 @@
 
 - (void)session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID
 {
+    NSLog(@"didReceiveData");
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.browserViewController dismissViewControllerAnimated:NO completion:nil];
+        [[[UIAlertView alloc] initWithTitle:peerID.displayName message:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
     });
 }
 
 - (void)session:(MCSession *)session didReceiveStream:(NSInputStream *)stream withName:(NSString *)streamName fromPeer:(MCPeerID *)peerID
 {
-    
+    NSLog(@"didReceiveStream");
 }
 
 - (void)session:(MCSession *)session didStartReceivingResourceWithName:(NSString *)resourceName fromPeer:(MCPeerID *)peerID withProgress:(NSProgress *)progress
 {
-    
+    NSLog(@"didStartReceivingResource");
 }
 
 - (void)session:(MCSession *)session didFinishReceivingResourceWithName:(NSString *)resourceName fromPeer:(MCPeerID *)peerID atURL:(NSURL *)localURL withError:(NSError *)error
 {
+    NSLog(@"didFinishReceivingResource");
     if (!error)
     {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.browserViewController dismissViewControllerAnimated:NO completion:nil];
+            UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:localURL]];
+            if (image)
+            {
+                [self showImageViewWithImage:image];
+            }
         });
     }
+    else
+    {
+        NSLog(@"%@", error.localizedDescription);
+    }
+}
+
+- (void)showImageViewWithImage:(UIImage *)image
+{
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    [imageView setUserInteractionEnabled:YES];
+    [imageView setFrame:[[UIScreen mainScreen] bounds]];
+    [imageView setBackgroundColor:[UIColor clearColor]];
+    [imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideImageView:)]];
+    [self.view addSubview:imageView];
+}
+
+- (void)hideImageView:(UITapGestureRecognizer *)tapGestureRecognizer
+{
+    [tapGestureRecognizer.view removeFromSuperview];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -108,7 +136,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     MCPeerID *peer = self.session.connectedPeers[indexPath.row];
     self.peers = @[peer];
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:peer.displayName delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Text", @"Image", @"Audio", nil];
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:peer.displayName delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Text", @"Image", nil];
     [actionSheet showInView:self.tableView];
 }
 
@@ -133,10 +161,7 @@
             [self sendTextForm];
             break;
         case 1:
-            [self performSelector:@selector(sendImageForm) withObject:nil afterDelay:0.3f];
-            break;
-        case 2:
-            [self sendAudioForm];
+            [self sendImageForm];
             break;
         default:
             break;
@@ -158,11 +183,6 @@
     [self presentViewController:imagePickerController animated:YES completion:nil];
 }
 
-- (void)sendAudioForm
-{
-    [self sendAudio:nil];
-}
-
 - (void)sendText:(NSString *)text
 {
     if (text)
@@ -179,28 +199,12 @@
 {
     if (image)
     {
-        NSData *data = UIImagePNGRepresentation(image);
+        NSData *data = UIImageJPEGRepresentation(image, 0.0f);
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsPath = [paths objectAtIndex:0];
         NSString *filePath = [documentsPath stringByAppendingPathComponent:@"image.png"];
         [data writeToFile:filePath atomically:YES];
         NSURL *fileURL = [NSURL fileURLWithPath:filePath];
-        for (MCPeerID *peer in self.peers)
-        {
-            [self.session sendResourceAtURL:fileURL withName:[fileURL lastPathComponent] toPeer:peer withCompletionHandler:^(NSError *error) {
-                if (error)
-                {
-                    NSLog(@"%@", error.localizedDescription);
-                }
-            }];
-        }
-    }
-}
-
-- (void)sendAudio:(NSURL *)fileURL
-{
-    if (fileURL)
-    {
         for (MCPeerID *peer in self.peers)
         {
             [self.session sendResourceAtURL:fileURL withName:[fileURL lastPathComponent] toPeer:peer withCompletionHandler:^(NSError *error) {
@@ -221,7 +225,7 @@
 - (IBAction)sendBroadcast
 {
     self.peers = self.session.connectedPeers;
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Send Broadcast" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Text", @"Image", @"Audio", nil];
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Send Broadcast" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Text", @"Image", nil];
     [actionSheet showInView:self.view];
 }
 
