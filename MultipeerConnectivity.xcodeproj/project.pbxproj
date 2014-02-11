@@ -34,23 +34,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D5261DD918A811A1000D415B /* MultipeerConnectivityExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultipeerConnectivityExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5261DD918A811A1000D415B /* MultipeerConnectivity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultipeerConnectivity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5261DDC18A811A1000D415B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D5261DDE18A811A1000D415B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D5261DE018A811A1000D415B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		D5261DE418A811A1000D415B /* MultipeerConnectivityExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MultipeerConnectivityExample-Info.plist"; sourceTree = "<group>"; };
+		D5261DE418A811A1000D415B /* MultipeerConnectivity-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MultipeerConnectivity-Info.plist"; sourceTree = "<group>"; };
 		D5261DE618A811A1000D415B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D5261DE818A811A1000D415B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D5261DEA18A811A1000D415B /* MultipeerConnectivityExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MultipeerConnectivityExample-Prefix.pch"; sourceTree = "<group>"; };
+		D5261DEA18A811A1000D415B /* MultipeerConnectivity-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MultipeerConnectivity-Prefix.pch"; sourceTree = "<group>"; };
 		D5261DEB18A811A1000D415B /* ARAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARAppDelegate.h; sourceTree = "<group>"; };
 		D5261DEC18A811A1000D415B /* ARAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARAppDelegate.m; sourceTree = "<group>"; };
 		D5261DEF18A811A1000D415B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D5261DF418A811A1000D415B /* ARViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARViewController.h; sourceTree = "<group>"; };
 		D5261DF518A811A1000D415B /* ARViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARViewController.m; sourceTree = "<group>"; };
 		D5261DF718A811A1000D415B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		D5261DFD18A811A1000D415B /* MultipeerConnectivityExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultipeerConnectivityExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5261DFD18A811A1000D415B /* MultipeerConnectivityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultipeerConnectivityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5261DFE18A811A1000D415B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		D5261E0618A811A1000D415B /* MultipeerConnectivityExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MultipeerConnectivityExampleTests-Info.plist"; sourceTree = "<group>"; };
+		D5261E0618A811A1000D415B /* MultipeerConnectivityTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MultipeerConnectivityTests-Info.plist"; sourceTree = "<group>"; };
 		D5261E0818A811A1000D415B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D5261E0A18A811A1000D415B /* MultipeerConnectivityExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultipeerConnectivityExampleTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,8 +92,8 @@
 		D5261DDA18A811A1000D415B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D5261DD918A811A1000D415B /* MultipeerConnectivityExample.app */,
-				D5261DFD18A811A1000D415B /* MultipeerConnectivityExampleTests.xctest */,
+				D5261DD918A811A1000D415B /* MultipeerConnectivity.app */,
+				D5261DFD18A811A1000D415B /* MultipeerConnectivityTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,10 +126,10 @@
 		D5261DE318A811A1000D415B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D5261DE418A811A1000D415B /* MultipeerConnectivityExample-Info.plist */,
+				D5261DE418A811A1000D415B /* MultipeerConnectivity-Info.plist */,
 				D5261DE518A811A1000D415B /* InfoPlist.strings */,
 				D5261DE818A811A1000D415B /* main.m */,
-				D5261DEA18A811A1000D415B /* MultipeerConnectivityExample-Prefix.pch */,
+				D5261DEA18A811A1000D415B /* MultipeerConnectivity-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -146,7 +146,7 @@
 		D5261E0518A811A1000D415B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D5261E0618A811A1000D415B /* MultipeerConnectivityExampleTests-Info.plist */,
+				D5261E0618A811A1000D415B /* MultipeerConnectivityTests-Info.plist */,
 				D5261E0718A811A1000D415B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -155,9 +155,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D5261DD818A811A1000D415B /* MultipeerConnectivityExample */ = {
+		D5261DD818A811A1000D415B /* MultipeerConnectivity */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5261E0E18A811A1000D415B /* Build configuration list for PBXNativeTarget "MultipeerConnectivityExample" */;
+			buildConfigurationList = D5261E0E18A811A1000D415B /* Build configuration list for PBXNativeTarget "MultipeerConnectivity" */;
 			buildPhases = (
 				D5261DD518A811A1000D415B /* Sources */,
 				D5261DD618A811A1000D415B /* Frameworks */,
@@ -167,14 +167,14 @@
 			);
 			dependencies = (
 			);
-			name = MultipeerConnectivityExample;
+			name = MultipeerConnectivity;
 			productName = MultipeerConnectivityExample;
-			productReference = D5261DD918A811A1000D415B /* MultipeerConnectivityExample.app */;
+			productReference = D5261DD918A811A1000D415B /* MultipeerConnectivity.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D5261DFC18A811A1000D415B /* MultipeerConnectivityExampleTests */ = {
+		D5261DFC18A811A1000D415B /* MultipeerConnectivityTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5261E1118A811A1000D415B /* Build configuration list for PBXNativeTarget "MultipeerConnectivityExampleTests" */;
+			buildConfigurationList = D5261E1118A811A1000D415B /* Build configuration list for PBXNativeTarget "MultipeerConnectivityTests" */;
 			buildPhases = (
 				D5261DF918A811A1000D415B /* Sources */,
 				D5261DFA18A811A1000D415B /* Frameworks */,
@@ -185,9 +185,9 @@
 			dependencies = (
 				D5261E0318A811A1000D415B /* PBXTargetDependency */,
 			);
-			name = MultipeerConnectivityExampleTests;
+			name = MultipeerConnectivityTests;
 			productName = MultipeerConnectivityExampleTests;
-			productReference = D5261DFD18A811A1000D415B /* MultipeerConnectivityExampleTests.xctest */;
+			productReference = D5261DFD18A811A1000D415B /* MultipeerConnectivityTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -205,7 +205,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D5261DD418A811A0000D415B /* Build configuration list for PBXProject "MultipeerConnectivityExample" */;
+			buildConfigurationList = D5261DD418A811A0000D415B /* Build configuration list for PBXProject "MultipeerConnectivity" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -218,8 +218,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D5261DD818A811A1000D415B /* MultipeerConnectivityExample */,
-				D5261DFC18A811A1000D415B /* MultipeerConnectivityExampleTests */,
+				D5261DD818A811A1000D415B /* MultipeerConnectivity */,
+				D5261DFC18A811A1000D415B /* MultipeerConnectivityTests */,
 			);
 		};
 /* End PBXProject section */
@@ -269,7 +269,7 @@
 /* Begin PBXTargetDependency section */
 		D5261E0318A811A1000D415B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D5261DD818A811A1000D415B /* MultipeerConnectivityExample */;
+			target = D5261DD818A811A1000D415B /* MultipeerConnectivity */;
 			targetProxy = D5261E0218A811A1000D415B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -383,9 +383,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MultipeerConnectivityExample/MultipeerConnectivityExample-Prefix.pch";
-				INFOPLIST_FILE = "MultipeerConnectivityExample/MultipeerConnectivityExample-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "MultipeerConnectivityExample/MultipeerConnectivity-Prefix.pch";
+				INFOPLIST_FILE = "MultipeerConnectivityExample/MultipeerConnectivity-Info.plist";
+				PRODUCT_NAME = MultipeerConnectivity;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -397,9 +397,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MultipeerConnectivityExample/MultipeerConnectivityExample-Prefix.pch";
-				INFOPLIST_FILE = "MultipeerConnectivityExample/MultipeerConnectivityExample-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "MultipeerConnectivityExample/MultipeerConnectivity-Prefix.pch";
+				INFOPLIST_FILE = "MultipeerConnectivityExample/MultipeerConnectivity-Info.plist";
+				PRODUCT_NAME = MultipeerConnectivity;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -420,8 +420,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "MultipeerConnectivityExampleTests/MultipeerConnectivityExampleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "MultipeerConnectivityExampleTests/MultipeerConnectivityTests-Info.plist";
+				PRODUCT_NAME = MultipeerConnectivityTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -439,8 +439,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MultipeerConnectivityExample/MultipeerConnectivityExample-Prefix.pch";
-				INFOPLIST_FILE = "MultipeerConnectivityExampleTests/MultipeerConnectivityExampleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "MultipeerConnectivityExampleTests/MultipeerConnectivityTests-Info.plist";
+				PRODUCT_NAME = MultipeerConnectivityTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -449,7 +449,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D5261DD418A811A0000D415B /* Build configuration list for PBXProject "MultipeerConnectivityExample" */ = {
+		D5261DD418A811A0000D415B /* Build configuration list for PBXProject "MultipeerConnectivity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5261E0C18A811A1000D415B /* Debug */,
@@ -458,21 +458,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5261E0E18A811A1000D415B /* Build configuration list for PBXNativeTarget "MultipeerConnectivityExample" */ = {
+		D5261E0E18A811A1000D415B /* Build configuration list for PBXNativeTarget "MultipeerConnectivity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5261E0F18A811A1000D415B /* Debug */,
 				D5261E1018A811A1000D415B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		D5261E1118A811A1000D415B /* Build configuration list for PBXNativeTarget "MultipeerConnectivityExampleTests" */ = {
+		D5261E1118A811A1000D415B /* Build configuration list for PBXNativeTarget "MultipeerConnectivityTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5261E1218A811A1000D415B /* Debug */,
 				D5261E1318A811A1000D415B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
